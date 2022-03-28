@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", "Times", "sans-serif";
+  }
+  
+  body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.178);
+  }
+  
+  header{
+    text-align: center;
+    position: relative;
+    top: 50px;
+    width: 350px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.637), rgba(0, 89, 255, 0.678), rgba(0, 0, 0, 0.637));
+    border-top: solid 1px rgba(0, 0, 0, 0.329);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.329);
+    border-radius: 25px 6px 25px 6px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.836);
+    padding-top: 20px;
+    padding-right: 140px;
+    padding-bottom: 20px;
+    padding-left: 140px;
+    margin: auto;
+  }
+  
+  form a{
+    position: relative;
+    left: 500px;
+    top: 85px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  form a:hover{
+    text-decoration: none;
+  }
+  
+  form a:active{
+    color: rgba(240, 248, 255, 0.473);
+  }
+  
+  form p{
+    position: relative;
+    text-align: center;
+    top: 35px;
+    left: 605px;
+    width: 175px;
+    color: rgb(189, 3, 3);
+    font-weight: bold;
+  }
+  
+  main{
+    position: relative;
+    top: 145px;
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(to right, rgba(0, 89, 255, 0.678), rgba(0, 0, 0, 0.637));
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(1, 23, 63, 0.774);
+    margin: auto;
+  }
+  
+  main h1{
+    position: relative;
+    top: 30px;
+    left: 145px;
+    padding-left: 10px;
+    width: 90px;
+    color: rgba(255, 255, 255, 0.836);
+  }
+  
+  img#logo_user{
+    position: relative;
+    top: 68px;
+    left: 50px;
+    width: 30px;
+  }
+  
+  main input#user{
+    position: relative;
+    top: 60px;
+    left: 37px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.418);
+    border: none;
+    border-radius: 7px;
+    color: white;
+  }
+  
+  main input#user:focus, main input#password:focus{
+    outline: none;
+    box-shadow: 1px 1px 5px black;
+  }
+  
+  input::placeholder{
+    color: rgba(212, 199, 199, 0.726);
+  }
+  
+  img#logo_password{
+    position: relative;
+    top: 128px;
+    left: 17px;
+    width: 30px;
+  }
+  
+  main input#password{
+    position: relative;
+    top: 80px;
+    left: 105px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+  }
+  
+  main button{
+    position: relative;
+    top: 150px;
+    right: 75px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: rgba(0, 0, 0, 0.301);
+    color: white;
+    box-shadow: 1px 1px 5px black;
+  }
+  
+  main button:hover{
+    color: black;
+    cursor: pointer;
+  }
+  
+  main button:active{
+    background-color: rgba(5, 5, 5, 0.507);
+    box-shadow: none;
+  }
