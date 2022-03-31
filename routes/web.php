@@ -14,6 +14,8 @@
 Route::get('/', 'AuthController@exibir_login');
 Route::get('/cadastro', 'AuthController@exibir_cadastro');
 
-Route::get('/agenda', 'AgendaController@exibir_tarefas');
-Route::get('/agenda/adicionar', 'AgendaController@exibir_adicionar_tarefas');
+Route::get('/series', 'SeriesController@exibir_series');
+Route::get('/series/adicionar', 'SeriesController@exibir_adicionar_serie');
+Route::post('/series/adicionar', 'SeriesController@add_serie');
+Route::post('/series/remover/{id}', 'SeriesController@del_serie');
 

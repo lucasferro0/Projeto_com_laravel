@@ -11,6 +11,7 @@
     <h1>LifeBook</h1>
   </header>
   <form action="#" method="post">
+    @csrf
     <main>
       <h1>Cadastro</h1>
       <img id="logo_user" src="{{ asset('img/user-solid.svg') }}" alt="logo_user">
