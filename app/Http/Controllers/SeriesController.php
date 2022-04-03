@@ -35,9 +35,11 @@ class SeriesController extends Controller
         return redirect("/series");
     }
 
-    public function del_serie(Request $request)
+    public function del_serie(Request $request, int $id)
     {
-        $id_serie = $request->id;
+        #$id_serie = $request->id;     É UMA OUTRA FORMA DE PEGAR O PARÂMETRO RECEBIDO NA ROTA
+
+        $id_serie = $id;
 
         $registro = Series::where("cod_serie", $id_serie)->first();
 
