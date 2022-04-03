@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'AuthController@exibir_login');
-Route::get('/cadastro', 'AuthController@exibir_cadastro');
+Route::get('/', 'LoginController@exibir_login');
+Route::get('/cadastro', 'CadastroController@exibir_cadastro');
 
 Route::get('/series', 'SeriesController@exibir_series');
 Route::get('/series/adicionar', 'SeriesController@exibir_adicionar_serie');
