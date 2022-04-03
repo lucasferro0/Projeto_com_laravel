@@ -10,7 +10,7 @@ class SeriesController extends Controller
 
     public function exibir_series(Request $request)
     {
-        $series = Series::query()->orderBy("nome_serie")->get();
+        $series = Series::query()->orderBy("nome_serie")->get(); #Outra forma: $series = Series::orderBy("nome_serie")->get();
 
         $mensagem = $request->session()->get("mensagem");
 
