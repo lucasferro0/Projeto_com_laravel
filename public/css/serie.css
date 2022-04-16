@@ -16,3 +16,11 @@ img#logo_del{
     width: 25px;
 }
 
+img#logo_info{
+    width: 25px;
+}
+
+a#info{
+    margin-right: 6px;
+}
+

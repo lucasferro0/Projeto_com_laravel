@@ -20,7 +20,7 @@
       <input id="password" name="senha" type="password" placeholder="Senha">
       <button type="submit">Registrar</button>
     </main>
-    <a href="/">Faça seu login</a>
+    <a href="/login">Faça seu login</a>
   </form>
 </body>
 </html>

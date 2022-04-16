@@ -20,17 +20,22 @@
         @endif
         <a class="btn btn-dark mb-2" href="/series/adicionar">Adicionar</a>
 
-        <ul class="list-group">
+        <ul class="list-group mb-2">
             @foreach($series as $registro)
-                <li class = "list-group-item d-flex justify-content-between align-items-center">
-                    {{ $registro->nome_serie; }} 
+            <li class = "list-group-item d-flex justify-content-between align-items-center">
+                {{ $registro->nome_serie }}
+                <span class="d-flex">
+                    <a id="info" href= "/series/{{ $registro->cod_serie }}/temporadas" class="btn btn-info btn-sm">
+                        <img id="logo_info" src="{{ asset('img/inbox-solid.svg') }}" alt="">
+                    </a>
                     <form action="/series/remover/{{ $registro->cod_serie }}" method="post" onsubmit="return confirm('Deseja excluir a série {{ $registro->nome_serie }} ?')">
                         @csrf
                         <button class="btn btn-danger btn-sm" type="submit">
-                            <img id="logo_del" src="{{ asset('img/delete_img.svg') }}" alt="logo_delete">
+                            <img id="logo_del" src="{{ asset('img/delete_img.svg') }}" alt="">
                         </button>
                     </form>
-                </li>
+                </span>
+            </li>
             @endforeach
         </ul>
     </div>
