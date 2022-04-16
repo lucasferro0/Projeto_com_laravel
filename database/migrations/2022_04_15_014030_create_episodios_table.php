@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('episodios', function (Blueprint $table) {
             $table->bigIncrements("cod_episodio");
             $table->integer("numero_episodio");
-            $table->integer("temporadas_cod_temporada");
-            $table->foreign("temporadas_cod_temporada")->references("cod_temporada")->on("temporadas");
+            $table->integer("temporadas_cod_temporada"); # O NOME DA CHAVE ESTRANGEIRA DEVE SER: nome da tabela a que faz referência + chave primária da tabela a que faz referência
+            $table->foreign("temporadas_cod_temporada")->references("cod_temporada")->on("temporadas"); # O NOME DA CHAVE ESTRANGEIRA DEVE SER: nome da tabela a que faz referência + chave primária da tabela a que faz referência
         });
     }
 
