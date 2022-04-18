@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Series;
 use Illuminate\Http\Request;
 use App\Http\Requests\FormValidationRequest;
+use App\Services\RemovedorDeSerie;
+use Illuminate\Support\Facades\DB;
 
 class SeriesController extends Controller
 {
@@ -27,6 +29,9 @@ class SeriesController extends Controller
     {
 
         $nome_da_serie = $request->get("nm_serie");
+
+        DB::beginTransaction(); # INICIA UMA TRANSAÇÃO
+
         $serie = Series::create(["nome_serie" => $nome_da_serie]);
 
         # INSERINDO AS TEMPORADAS E SEUS EPISÓDIOS
@@ -42,6 +47,7 @@ class SeriesController extends Controller
             }
         }
 
+        DB::commit(); # FINALIZA A TRANSAÇÃO
 
         $request->session()->flash("mensagem", "A série $serie->cod_serie, cujo nome é $serie->nome_serie, foi adicionada com sucesso!");
         
@@ -49,17 +55,12 @@ class SeriesController extends Controller
         
     }
 
-    public function del_serie(Request $request, int $id)
+    public function del_serie(Request $request, RemovedorDeSerie $removedor_de_serie, int $id)
     {
-        #$id_serie = $request->id;     É UMA OUTRA FORMA DE PEGAR O PARÂMETRO RECEBIDO NA ROTA
-        $id_serie = $id;
 
-        $registro = Series::where("cod_serie", $id_serie)->first();
+        $serie = $removedor_de_serie->remover_serie($id);
 
-        
-        Series::where("cod_serie", $id_serie)->delete();
-
-        $request->session()->flash("mensagem", "A série $registro->nome_serie foi deletada com sucesso!");
+        $request->session()->flash("mensagem", "A série $serie->nome_serie foi deletada com sucesso!");
 
         
         return redirect("/series");

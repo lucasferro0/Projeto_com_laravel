@@ -23,3 +23,6 @@ Route::post('/series/remover/{id}', 'SeriesController@del_serie');
 
 Route::get('/series/{serie_id}/temporadas', 'TemporadasController@exibir_temporadas');
 
+
+Route::get('/series/temporadas/{temporada_id}/episodios', 'EpisodiosController@exibir_episodios');
+
