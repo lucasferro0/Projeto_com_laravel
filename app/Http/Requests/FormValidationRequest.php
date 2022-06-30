@@ -31,12 +31,12 @@ class FormValidationRequest extends FormRequest
     }
 
     /*
-    PERSONALIZA O NOME DOS CAMPOS PARA SEREM EXIBIDOS NA MENSAGEM DE ERRO ATRAVÉS DO :attribute      
+    PERSONALIZA O NOME DOS CAMPOS DO FRONT PARA QUANDO FOREM SER EXIBIDOS NA MENSAGEM DE ERRO ATRAVÉS DO :attribute      
     
     public function attributes()
     {
         return [
-            "nome_serie" => "O nome da série",
+            "nm_serie" => "O nome da série",
             "num_temporada" => "O número de temporadas",
             "num_ep" => "O número de episódios"
         ];
