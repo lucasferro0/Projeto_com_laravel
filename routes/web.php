@@ -11,6 +11,9 @@
 |
 */
 
+
+Route::get('/', 'HomePageController@index');
+
 Route::get('/login', 'LoginController@exibir_login');
 Route::get('/cadastro', 'CadastroController@exibir_cadastro');
 
